@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tea
+  name: and
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tea
+      app: and
   template:
     metadata:
       labels:
-        app: tea
+        app: and
     spec:
       containers:
-      - image: okteto.dev/tea:latest
-        name: tea
+      - image: okteto.dev/and:latest
+        name: and
         ports:
         - containerPort: 8080
         env:
